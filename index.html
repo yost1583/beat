@@ -1,0 +1,101 @@
+
+<html>
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container">
+  <div class="row" style="margin-top: 40px;">
+    <div class="span8" style="margin-left:-40px;">
+      <object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000'
+          id='DVRPlayerConfiguration' width='640' height='360'
+          codebase='http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab'>
+          <param name='movie' value='http://www.streamer.bg/includes/player/Player_0.3.79c.swf' />
+          <param name='quality' value='high' />
+          <param name='bgcolor' value='#E6E7E8 ' />
+          <param name='allowScriptAccess' value='sameDomain' />
+          <param name='allowFullScreen' value='true' />
+          <param name='flashvars' value='configurationURL=http://www.streamer.bg/get_film_xml.php?filmId=368,25' />
+          <embed src='http://www.streamer.bg/includes/player/Player_0.3.79c.swf' quality='high' bgcolor='#E6E7E8 '
+              width='640' height='360' name='DVRPlayerConfiguration' align='middle'
+              play='true'
+              loop='false'
+              quality='high'
+              allowScriptAccess='sameDomain'
+              allowFullScreen='true'
+              type='application/x-shockwave-flash'
+              pluginspage='http://www.adobe.com/go/getflashplayer'
+              flashvars='configurationURL=http://www.streamer.bg/get_film_xml.php?filmId=368,25'>
+          </embed>
+      </object>
+    </div>
+    <div class="span4">
+      <div id="tlkio" data-channel="mybeat_live" style="width:450px;height:600px;margin-left:20px;">
+      </div>
+      <script async type="text/javascript">
+        (function (window, document) {
+          window.onload = function (e) {
+            var target_element  = document.getElementById('tlkio'),
+                channel_name    = target_element.getAttribute('data-channel'),
+                custom_css_path = target_element.getAttribute('data-theme'),
+                iframe          = document.createElement('iframe');
+
+            var iframe_src = 'http://tlk.io/' + channel_name;
+
+            if (custom_css_path && custom_css_path.length > 0) {
+              iframe_src += ('?custom_css_path=' + custom_css_path);
+            }
+
+            iframe.setAttribute('src', iframe_src);
+            iframe.setAttribute('width', '100%');
+            iframe.setAttribute('height', '100%');
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('style', 'margin-bottom: -6px;');
+
+            var current_style = target_element.getAttribute('style');
+            target_element.setAttribute('style', 'overflow: auto; -webkit-overflow-scrolling: touch;' + current_style);
+
+            target_element.appendChild(iframe);
+          };
+        })(window, document);
+      </script>
+    </div>
+  </div>
+  <div class="row">
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+    </div>
+    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+    <script type="text/javascript" src="s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5178062f111a57c7"></script>
+    <!-- AddThis Button END -->
+  </div>
+  <div class="row">
+    <script type="text/javascript"><!--
+      google_ad_client = "ca-pub-7316264510359110";
+      /* monopoly */
+      google_ad_slot = "7010586809";
+      google_ad_width = 970;
+      google_ad_height = 90;
+      //-->
+    </script>
+    <script type="text/javascript"
+      src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+    </script>
+  </div>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-40446346-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+</html>
